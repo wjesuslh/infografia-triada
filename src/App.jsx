@@ -1,79 +1,91 @@
 import React from 'react';
 import './App.css';
-import { Lock, ShieldCheck, Zap, Eye, FileCheck, Server } from 'lucide-react';
+import { Lock, ShieldAlert, Zap, Eye, CheckCircle2, CloudLightning, Sparkles } from 'lucide-react';
 
 function App() {
   return (
-    <div className="main-wrapper">
-      <div className="hero-background"></div>
-      <div className="container">
-        <header className="header">
-          <div className="header-icon-container">
-            <ShieldCheck className="header-main-icon" size={64} strokeWidth={1.5} />
+    <div className="cyber-space">
+      {/* Círculos de luz flotantes en el fondo para dar efecto vivo */}
+      <div className="glow-orb orb-1"></div>
+      <div className="glow-orb orb-2"></div>
+      <div className="glow-orb orb-3"></div>
+
+      <div className="content-container">
+        <header className="hero-header">
+          <div className="badge-pill">
+            <Sparkles size={16} /> Ciberseguridad Interactiva
           </div>
-          <h1>🛡️ Infografía: La Tríada de la Seguridad</h1>
-          <p>¿Qué protege la seguridad de la información en el mundo digital?</p>
-          <p className="subtitle-small">Descubre los pilares fundamentales de la Ciberseguridad explicados para todos.</p>
+          <h1>La Tríada CIA</h1>
+          <p className="hero-subtitle">Los tres pilares esenciales que sostienen toda la seguridad digital del mundo moderno.</p>
         </header>
 
-        <div className="cards-grid">
-          {/* Tarjeta Confidencialidad */}
-          <div className="card neumorphic-card">
-            <div className="card-icon-wrapper confidencialidad-icon">
-              <Lock size={36} />
-              <Eye className="sub-icon" size={16} />
+        <div className="cards-wrapper">
+          {/* Tarjeta 1: Confidencialidad */}
+          <div className="glass-card card-confidentiality">
+            <div className="card-top">
+              <div className="icon-box">
+                <Lock size={28} />
+              </div>
+              <span className="card-tag">Pilar 01</span>
             </div>
             <h2>Confidencialidad</h2>
-            <p className="card-definition"><strong>En simple:</strong> Es asegurar que la información solo la pueda ver quien tiene el permiso.</p>
-            <div className="ejemplo-container">
-              <h4>🔒 Ejemplos Cotidianos:</h4>
+            <p className="core-desc">Asegurar que la información secreta solo sea vista por quien tiene la autorización legítima.</p>
+            
+            <div className="example-pill-box">
+              <span className="pill-title">Ejemplos en tu día a día:</span>
               <ul>
-                <li>Tus contraseñas secretas</li>
-                <li>Mensajes privados de chat</li>
-                <li>Tu historial médico</li>
+                <li>🔑 Tus contraseñas de redes sociales</li>
+                <li>💬 Mensajes cifrados de WhatsApp</li>
+                <li>🏥 Tu historial médico privado</li>
               </ul>
             </div>
           </div>
 
-          {/* Tarjeta Integridad */}
-          <div className="card neumorphic-card">
-            <div className="card-icon-wrapper integridad-icon">
-              <FileCheck size={36} />
-              <Zap className="sub-icon" size={16} />
+          {/* Tarjeta 2: Integridad */}
+          <div className="glass-card card-integrity">
+            <div className="card-top">
+              <div className="icon-box">
+                <CheckCircle2 size={28} />
+              </div>
+              <span className="card-tag">Pilar 02</span>
             </div>
             <h2>Integridad</h2>
-            <p className="card-definition"><strong>En simple:</strong> Es garantizar que los datos no sean alterados, modificados o destruidos por intrusos.</p>
-            <div className="ejemplo-container">
-              <h4>📝 Ejemplos Cotidianos:</h4>
+            <p className="core-desc">Garantizar que los datos estén intactos y nadie los haya modificado a tus espaldas.</p>
+            
+            <div className="example-pill-box">
+              <span className="pill-title">Ejemplos en tu día a día:</span>
               <ul>
-                <li>Un contrato digital firmado</li>
-                <li>Tus notas universitarias</li>
-                <li>Una transferencia bancaria segura</li>
+                <li>📝 Notas universitarias sin alterar</li>
+                <li>📜 Contratos digitales originales</li>
+                <li>💸 Transferencias bancarias exactas</li>
               </ul>
             </div>
           </div>
 
-          {/* Tarjeta Disponibilidad */}
-          <div className="card neumorphic-card">
-            <div className="card-icon-wrapper disponibilidad-icon">
-              <Server size={36} />
-              <Zap className="sub-icon" size={16} />
+          {/* Tarjeta 3: Disponibilidad */}
+          <div className="glass-card card-availability">
+            <div className="card-top">
+              <div className="icon-box">
+                <CloudLightning size={28} />
+              </div>
+              <span className="card-tag">Pilar 03</span>
             </div>
             <h2>Disponibilidad</h2>
-            <p className="card-definition"><strong>En simple:</strong> Es asegurar que la información y los servicios estén accesibles cuando se necesiten.</p>
-            <div className="ejemplo-container">
-              <h4>⚡ Ejemplos Cotidianos:</h4>
+            <p className="core-desc">Garantizar que los sistemas y servicios estén siempre listos y accesibles cuando los necesites.</p>
+            
+            <div className="example-pill-box">
+              <span className="pill-title">Ejemplos en tu día a día:</span>
               <ul>
-                <li>Tu cuenta de Netflix o Spotify</li>
-                <li>El cajero automático 24/7</li>
-                <li>Página web de ventas online</li>
+                <li>🎬 Tu cuenta de Netflix disponible 24/7</li>
+                <li>🏧 Cajeros automáticos funcionando</li>
+                <li>🌐 Páginas web de compras online</li>
               </ul>
             </div>
           </div>
         </div>
-        
-        <footer className="final-footer">
-          <p>Actividad - Seguridad de la Información - Desarrollado en React</p>
+
+        <footer className="cyber-footer">
+          <p>Diseñado con pasión para proteger el futuro digital ✨</p>
         </footer>
       </div>
     </div>
