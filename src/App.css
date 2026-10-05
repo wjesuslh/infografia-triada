@@ -75,6 +75,7 @@ body {
   text-align: center;
   margin-bottom: 60px;
   animation: fadeInDown 0.8s ease-out;
+  padding: 0 15px;
 }
 
 .badge-pill {
@@ -93,7 +94,7 @@ body {
 }
 
 .hero-header h1 {
-  font-size: 3.8rem;
+  font-size: clamp(2.5rem, 5vw, 4rem); /* Se adapta automáticamente para no cortarse */
   font-weight: 800;
   margin: 0 0 15px 0;
   background: linear-gradient(to right, #38bdf8, #c084fc, #f43f5e);
@@ -101,6 +102,8 @@ body {
   background-clip: text;
   color: transparent;
   letter-spacing: -1px;
+  padding: 0 10px; /* Margen interno de seguridad para el texto con degradado */
+  line-height: 1.2;
 }
 
 .hero-subtitle {
@@ -132,14 +135,12 @@ body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-/* Efecto hover moderno: la tarjeta flota y brilla */
 .glass-card:hover {
   transform: translateY(-12px) scale(1.02);
   border-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
 }
 
-/* Acentos de color individuales para cada tarjeta */
 .card-confidentiality:hover { box-shadow: 0 30px 60px rgba(56, 189, 248, 0.15); }
 .card-integrity:hover { box-shadow: 0 30px 60px rgba(168, 85, 247, 0.15); }
 .card-availability:hover { box-shadow: 0 30px 60px rgba(244, 63, 94, 0.15); }
@@ -239,8 +240,4 @@ body {
 @keyframes fadeInDown {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-@media (max-width: 768px) {
-  .hero-header h1 { font-size: 2.8rem; }
 }
